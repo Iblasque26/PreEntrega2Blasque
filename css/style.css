@@ -1,5 +1,8 @@
 h1 {
     text-transform: capitalize;
     font-style: oblique;
-    color: blue;
+}
+
+.encabezado {
+    color: aqua;
 }
