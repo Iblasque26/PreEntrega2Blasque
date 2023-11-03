@@ -8,6 +8,8 @@ const seguros = [
   { tipo: 'Seguro de auto', precio: 250 }
 ];
 
+const clientes = [];
+
 function mostrarOpciones() {
   let opciones = '';
   seguros.forEach((seguro, index) => {
@@ -25,6 +27,7 @@ function comprar() {
     const precioSinDescuento = seguros[respuesta - 1].precio;
     const descuento = precioSinDescuento * 0.1;
     const precioConDescuento = precioSinDescuento - descuento;
+    clientes.push({ nombre: nombre, seleccion: seleccion, precio: precioConDescuento });
     alert(`Gracias por elegir tu ${seleccion}! El costo total con descuento es $${precioConDescuento}`);
   } else {
     alert("Usted seleccionó una opción inválida");
@@ -36,3 +39,5 @@ mostrarOpciones();
 comprar();
 
 alert(`Gracias por confiar en Seguros Blasque. Vuelva pronto!`);
+
+console.log(clientes);
